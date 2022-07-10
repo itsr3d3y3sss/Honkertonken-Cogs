@@ -90,7 +90,7 @@ class ReactionLog(commands.Cog):
         if await self.config.guild(member.guild).reaction_add_enable():
             embed = discord.Embed(
                 title=f"{member} added a reaction.",
-                color=0x03D692,
+                color=3553599,
             )
             embed.set_footer(text=f"{member} ({member.id})", icon_url=member.avatar_url)
             embed.add_field(
@@ -112,7 +112,7 @@ class ReactionLog(commands.Cog):
         if await self.config.guild(member.guild).reaction_remove_enable():
             embed = discord.Embed(
                 title=f"{member} removed a reaction.",
-                color=0xFF0000,
+                color=3553599,
             )
             embed.set_footer(text=f"{member} ({member.id})", icon_url=member.avatar_url)
             embed.add_field(
@@ -136,7 +136,7 @@ class ReactionLog(commands.Cog):
             for i in reaction:
                 emojis.append(i.emoji)
                 reactions = ", ".join(map(str, emojis))
-            embed = discord.Embed(title="Multiple reactions were removed.", color=0xFF0000)
+            embed = discord.Embed(title="Multiple reactions were removed.", color=3553599)
             embed.add_field(
                 name="Reactions:",
                 value=f"{str(reactions).strip('[]')}",
